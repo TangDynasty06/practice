@@ -108,7 +108,7 @@ public class TreeBuilder {
 			int leftDepth = root.getLeft() == null ? 0 : root.getLeft().getDepth();
 			int rightDepth = root.getRight() == null ? 0 : root.getRight().getDepth();
 			
-			if(rightDepth - leftDepth >= 2){
+			if(rightDepth - leftDepth > 2){
 				Node tmp = root;
 				root = tmp.getRight();
 				
@@ -125,7 +125,7 @@ public class TreeBuilder {
 				root.setBranch(-1);
 			}
 			
-			if(leftDepth - rightDepth >= 2){
+			if(leftDepth - rightDepth > 2){
 				Node tmp = root;
 				root = tmp.getLeft();
 				
@@ -207,7 +207,7 @@ public class TreeBuilder {
 		}
 		
 		public int getDepth(){
-			adjustSelf();
+			//adjustSelf();
 			int leftDepth = 0;
 			int rightDepth = 0;
 			
