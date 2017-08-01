@@ -307,7 +307,7 @@ public class TreeBuilder {
 			if(left != null){
 				left.buildInfo(builder);
 			}
-			if(isRoot){
+			if(builder.length() == 0){
 				builder.append(value);
 			}else{
 				builder.append(",").append(value);
